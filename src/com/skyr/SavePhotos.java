@@ -14,13 +14,6 @@ import java.util.Scanner;
 public class SavePhotos {
     private int photoNumber = 1;
 
-    SavePhotos (){
-
-
-
-
-
-    }
 
     public void send_payload(String PayloadExpression, String url,boolean areCredentials, String outputFolder) {
 
@@ -76,8 +69,6 @@ public class SavePhotos {
     private void LocateInHTML(String response, String outputFolder) {
         try {
             var doc = Jsoup.parse(response.toString());
-//            System.out.println(response.toString());
-            // find divs by id: thumbs-container
             var divs = doc.getElementById("thumbs-container");
             assert divs != null;
             var divs_in = divs.getElementsByClass("thumb-img-wrapper");
